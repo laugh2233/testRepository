@@ -36,6 +36,10 @@ export default {
   height:{
     type:String,
     default:'200px'
+  },
+  destroys:{
+    type:Boolean,
+    default:false
   }
   },
   data(){
@@ -53,6 +57,18 @@ export default {
   methods:{
     close(){
        this.$emit('update:visible',false)
+    }
+  },
+  watch:{
+    visible:{
+      immediate: true,
+      handel(newVal,oldVal){
+      if(newVal===true){
+        this.$emit('open')
+      }else{
+      $this.$destroy()
+    }
+    }
     }
   }
 }
@@ -88,6 +104,7 @@ export default {
   font-size: 14px;
   color: #000;
   height: 34px;
+  width: 90%;
   line-height: 34px;
   text-align: left;
   display: inline-block;
@@ -101,7 +118,7 @@ export default {
   display: inline-block;
 }
 .dislog-content{
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: calc(100% - 100px);
 }
 </style>
