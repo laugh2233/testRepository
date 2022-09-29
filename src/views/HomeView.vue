@@ -5,8 +5,10 @@
     :visible.sync="dialogVisible"
     :closeVisible="true"
     title="哈哈哈哈哈try again"
-    width="750px"
+    width="450px"
     height="400px"
+    @open="hello()"
+    @destroys="true"
     >
   <span>你试试内容</span>
   <div class="redContent"></div>
@@ -31,6 +33,11 @@ data() {
       return {
         dialogVisible: false
       };
+    },
+    methods:{
+      hello(){
+        alert('嗨嗨嗨，老八蜜汁小汉堡');
+      }
     }
 }
 </script>
