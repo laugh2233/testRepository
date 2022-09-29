@@ -53,7 +53,7 @@ export default {
     this.$refs.dislogBody.style.setProperty('--width',this.width);
     this.$refs.dislogBody.style.setProperty('--height',this.height);
     // this.$refs.mask.style.height = document.documentElement.clientHeight + 'px';
-    我试试
+    //我试试
   },
   methods:{
     close(){
