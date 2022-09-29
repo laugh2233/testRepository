@@ -1,0 +1,9 @@
+diff a/src/components/Bdialog.vue b/src/components/Bdialog.vue	(rejected hunks)
+@@ -53,6 +53,7 @@
+     this.$refs.dislogBody.style.setProperty('--width',this.width);
+     this.$refs.dislogBody.style.setProperty('--height',this.height);
+     // this.$refs.mask.style.height = document.documentElement.clientHeight + 'px';
++    我试试
+   },
+   methods:{
+     close(){
